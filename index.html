@@ -1,12 +1,239 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>ProDrive Academy - Professional Driving Lessons</title>
+    <style>
+        :root {
+            --primary-color: #ff5722;
+            --secondary-color: #2196f3;
+            --dark-color: #333;
+            --light-color: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        header {
+            background: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #e64a19;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            color: var(--dark-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 15px 0;
+        }
+
+        .contact-section {
+            background: #fff;
+            padding: 50px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: 40px auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark-color);
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <header>
+        <div class="logo">🚗 ProDrive Academy</div>
+        <nav>
+            <a href="#services">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Book Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Master the Road with Confidence</h1>
+        <p>Certified instructors, dual-control cars, and high first-time pass rates.</p>
+        <a href="#contact" class="btn">Book Your First Lesson</a>
+    </section>
+
+    <div class="container" id="services">
+        <h2 class="section-title">Our Training Packages</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Beginner Starter Pack</h3>
+                <p>Perfect for brand new drivers wanting to learn the absolute basics safely.</p>
+                <div class="price">$299</div>
+                <p>5 Hours behind the wheel</p>
+            </div>
+            <div class="card">
+                <h3>Complete License Course</h3>
+                <p>Comprehensive training covering parallel parking, highway driving, and test prep.</p>
+                <div class="price">$549</div>
+                <p>10 Hours + Mock Driving Test</p>
+            </div>
+            <div class="card">
+                <h3>Road Test Booster</h3>
+                <p>Quick refresher course right before your official state driving exam.</p>
+                <div class="price">$120</div>
+                <p>2 Hours Intensive Practice</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="contact-section" id="contact">
+            <h2 class="section-title" style="margin-bottom: 20px;">Book a Lesson</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="(555) 123-4567" required>
+                </div>
+                <div class="form-group">
+                    <label for="package">Select Package</label>
+                    <select id="package">
+                        <option>Beginner Starter Pack ($299)</option>
+                        <option>Complete License Course ($549)</option>
+                        <option>Road Test Booster ($120)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Notes (Optional)</label>
+                    <textarea id="message" rows="4" placeholder="Mention your experience level or preferred times..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Submit Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 ProDrive Academy. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
